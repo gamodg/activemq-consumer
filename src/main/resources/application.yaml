@@ -1,0 +1,16 @@
+server:
+  port: 8081
+spring:
+  activemq:
+    broker-url: tcp://localhost:61616
+    user: admin
+    password: admin
+      
+activemq:
+  queue: Consumer.A.VirtualTopic.Employee
+  initialRedeliveryDelay: 10000 
+  useCollisionAvoidance: true
+  maximumRedeliveries: 3 
+  useExponentialBackOff: true
+  backOffMultiplier: 2
+  
